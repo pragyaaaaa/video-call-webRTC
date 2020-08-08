@@ -34,7 +34,7 @@ myPeer.on('open', id => {
     socket.emit('join-room', ROOM_ID, id);
 })
 
-function connectToNewuser(userId, stream) {
+function connectToNewUser(userId, stream) {
     const call = myPeer.call(userId, stream)
     const video = document.createElement('video');
     call.on('stream', userVideoStream => {
